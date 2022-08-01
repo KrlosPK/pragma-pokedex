@@ -45,7 +45,8 @@ const searchPokemon = (event) => {
     const { value } = event.target.pokemon;
     fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
         .then((data) => data.json())
-        .then((response) => renderPokemonData(response));
+        .then((response) => renderPokemonData(response))
+        .catch((err) => renderNotFound());
 };
 
 const renderPokemonData = (data) => {
@@ -90,4 +91,14 @@ const renderPokemonStats = (stats) => {
         statElement.appendChild(statElementAmount);
         pokeStats.appendChild(statElement);
     });
+};
+
+// En caso de que no se encuentre el pokemon escrito
+const renderNotFound = () => {
+    pokeName.textContent = "No encontrado";
+    pokeImg.setAttribute("src", "pokebola.png");
+    pokeImg.stlye.background = "#fff";
+    pokeTypes.innerHTML = "";
+    pokeStats.innerHTML = "";
+    pokeId.textContent = "";
 };
