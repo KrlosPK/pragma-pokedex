@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokedex | Krlos Morales</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <form onsubmit="searchPokemon(event)" id="form">
+            <input
+                type="text"
+                name="pokemon"
+                autocomplete="off"
+                placeholder="Busca tu Pokemon Favorito..."
+                id="buscador"
+            />
+        </form>
+        <div class="container">
+            <div data-poke-card class="poke-card">
+                <div data-poke-name class="poke-name">Pokedex</div>
+                <div data-poke-img-container class="img-container">
+                    <img
+                        data-poke-img
+                        src="pokebola.png"
+                        alt="Default/Random Pokemon"
+                    />
+                </div>
+                <div data-poke-id class="poke-id"></div>
+                <div data-poke-types class="poke-types"></div>
+                <div data-poke-stats class="poke-stats"></div>
+            </div>
+            <footer>Made with 💖 by Krlos Morales</footer>
+        </div>
+    </body>
+</html>
