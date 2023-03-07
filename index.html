@@ -1,38 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Pokedex | Krlos Morales</title>
-        <link rel="stylesheet" href="styles.css" />
-        <script src="app.js" defer></script>
-    </head>
-    <body>
-        <form onsubmit="searchPokemon(event)" id="form">
-            <input
-                type="text"
-                name="pokemon"
-                autocomplete="off"
-                placeholder="Busca tu Pokemon Favorito..."
-                id="buscador"
-            />
-        </form>
-        <div class="container">
-            <div data-poke-card class="poke-card">
-                <div data-poke-name class="poke-name">Pokedex</div>
-                <div data-poke-img-container class="img-container">
-                    <img
-                        data-poke-img
-                        src="pokebola.png"
-                        alt="Default/Random Pokemon"
-                    />
-                </div>
-                <div data-poke-id class="poke-id"></div>
-                <div data-poke-types class="poke-types"></div>
-                <div data-poke-stats class="poke-stats"></div>
-            </div>
-            <footer>Made with 💖 by Krlos Morales</footer>
-        </div>
-    </body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex | Carlos Morales</title>
+    <link rel="shortcut icon" href="images/Pokebola.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="images/Pokebola.png" width="35" alt="Ícono de pokebola" />
+      <a href="#">POKÉDEX_</a>
+    </header>
+    <main>
+      <section>
+        <h1 id="pokeName"></h1>
+        <img src="images/charizard.png" id="pokeImg" width="300" alt="Pokémon Charizard" />
+      </section>
+      <aside>
+        <article class="aside__item">
+          <h3 class="item__title">NRO</h3>
+          <p class="item__text" id="nro"></p>
+        </article>
+        <article class="aside__item">
+          <h3 class="item__title">LEVEL</h3>
+          <p class="item__text" id="level"></p>
+        </article>
+        <article class="aside__item">
+          <h3 class="item__title">TYPE</h3>
+          <p class="item__text" id="type"></p>
+        </article>
+        <article class="aside__item">
+          <h3 class="item__title">HABLITY</h3>
+          <p class="item__text" id="ability"></p>
+        </article>
+        <article class="aside__item">
+          <h3 class="item__title">HEIGHT</h3>
+          <p class="item__text" id="height"></p>
+        </article>
+        <article class="aside__item">
+          <h3 class="item__title">WEIGHT</h3>
+          <p class="item__text" id="weight"></p>
+        </article>
+      </aside>
+    </main>
+    <footer>
+      <h2>OTHERS</h2>
+      <div class="footer__imgs">
+        <img
+          src="images/squirtle.png"
+          alt="Pokémon Squirtle"
+          width="80"
+          height="80"
+          id="squirtle"
+          class="footer__pokemon-img"
+        />
+        <img
+          src="images/mewtwo.png"
+          alt="Pokémon Mewtwo"
+          width="80"
+          height="80"
+          id="mewtwo"
+          class="footer__pokemon-img"
+        />
+        <img
+          src="images/charizard.png"
+          alt="Pokémon Charizard"
+          width="80"
+          height="80"
+          id="charizard"
+          class="footer__pokemon-img"
+        />
+        <img
+          src="images/snorlax.png"
+          alt="Pokémon Snorlax"
+          width="80"
+          height="80"
+          id="snorlax"
+          class="footer__pokemon-img"
+        />
+      </div>
+    </footer>
+  </body>
 </html>
